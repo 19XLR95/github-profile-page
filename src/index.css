@@ -1,0 +1,41 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #24292e;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 4%;
+    padding-right: 4%;
+    display: flex;
+    align-items: center;
+}
+
+nav > div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+nav > div:first-child > a {
+    color: white;
+    text-decoration: none;
+}
+
+nav > div:first-child > a:hover {
+    color: #cccccc;
+}
+
+nav > div:first-child > img {
+    width: 32px;
+    height: auto;
+}
+
+nav > div:first-child > * {
+    margin-right: 25px;
+}
