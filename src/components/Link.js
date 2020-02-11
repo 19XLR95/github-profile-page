@@ -1,9 +1,10 @@
 import React from "react";
 
-export default class ButtonLink extends React.Component {
+export default class Link extends React.Component {
     render() {
         return (
-            <a href="#">{this.props.btnValue} {this.props.children}</a>
+            <a className={this.props.cssClasses && this.props.cssClasses.join(" ")} 
+                href="#">{this.props.btnValue} {this.props.children}</a>
         );
     }
 }

@@ -17,18 +17,20 @@ nav {
     align-items: center;
 }
 
-nav > div:first-child {
+nav > div {
     display: flex;
     align-items: center;
 }
 
-nav > div:first-child > a {
+nav > div > a {
     color: white;
     text-decoration: none;
+    font-size: 15px;
+    transition: color 0.5s;
 }
 
-nav > div:first-child > a:hover {
-    color: #cccccc;
+nav > div > a:hover {
+    color: #bbbbbb;
 }
 
 nav > div:first-child > img {
@@ -37,5 +39,69 @@ nav > div:first-child > img {
 }
 
 nav > div:first-child > * {
-    margin-right: 25px;
+    margin-right: 20px;
 }
+
+nav > div:last-child {
+    margin-left: auto;
+}
+
+nav > div:last-child > * {
+    margin-left: 20px;
+}
+
+.border-white {
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 5px 7px 5px 7px;
+}
+
+nav > div:last-child > input {
+    background-color: #404448;
+    border: 0;
+    padding: 10px 5px 10px 10px;
+    border-radius: 3px;
+    font-family: 'Open Sans', sans-serif;
+    width: 230px;
+}
+
+nav > div:last-child > input:focus {
+    background-color: white;
+}
+
+.icon-search {
+    color: #8b8e91;
+    position: absolute;
+    right: 220px;
+}
+
+.drop-down-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    border-radius: 3px;
+    width: 250px;
+    margin-top: 20px;
+    margin-left: -20px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+}
+
+.ddm-item {
+    color: #8b8e91;
+    text-decoration: none;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+.ddm-item-title-active {
+    color: #24292e;
+    font-weight: bold;
+}
+
+.ddm-item:hover {
+    color: #1c74df;
+}
+/* font-family: 'Nanum Gothic Coding', monospace; */
