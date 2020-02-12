@@ -17,15 +17,37 @@ export default class Nav extends React.Component {
 }
 
 class NavLeft extends React.Component {
+    constructor() {
+        super();
+
+        this.state = {
+            ddm1Display: false,
+            ddm2Display: false,
+            ddm3Display: false
+        };
+
+        this.toggleDropDownMenu = this.toggleDropDownMenu.bind(this);
+    }
+
+    toggleDropDownMenu(ddmStateName) {
+        this.setState(
+            (prevState) => {
+                return {
+                    [ddmStateName]: !prevState[ddmStateName]
+                };
+            }
+        );
+    }
+
     render() {
         return (
             <div>
                 <img src={githubIcon} />
 
-                <Link btnValue="Why GitHub?">
+                <Link toggleDDM={this.toggleDropDownMenu} ddmStateName="ddm1Display" 
+                    btnValue="Why GitHub?" cssClasses={["toggled-link"]}>
                     <FontAwesomeIcon icon={faChevronDown} />
-
-                    <div className="drop-down-menu">
+                    <div className="drop-down-menu" style={this.state.ddm1Display ? {display: "flex", animationName: "ddm-on"} : {display: "none", animationName: ""}}>
                         <Link cssClasses={["ddm-item ddm-item-title-active"]} btnValue="Features" />
                         <Link cssClasses={["ddm-item"]} btnValue="Code review" />
                         <Link cssClasses={["ddm-item"]} btnValue="Project management" />
@@ -43,14 +65,39 @@ class NavLeft extends React.Component {
 
                 <Link btnValue="Enterprise" />
 
-                <Link btnValue="Explore">
+                <Link toggleDDM={this.toggleDropDownMenu} ddmStateName="ddm2Display" 
+                    btnValue="Explore?" cssClasses={["toggled-link"]}>
                     <FontAwesomeIcon icon={faChevronDown} />
+                    <div className="drop-down-menu" style={this.state.ddm2Display ? {display: "flex", animationName: "ddm-on"} : {display: "none", animationName: ""}}>
+                        <Link cssClasses={["ddm-item ddm-item-title-active"]} btnValue="Explore GitHub" />
+                        <hr style={{width: "200px", border: "0.5px solid rgba(0, 0, 0, 0.1)"}} />
+                        <Link cssClasses={["ddm-item ddm-item-title-inactive"]} btnValue="Learn & contribute" />
+                        <Link cssClasses={["ddm-item"]} btnValue="Topics" />
+                        <Link cssClasses={["ddm-item"]} btnValue="Collections" />
+                        <Link cssClasses={["ddm-item"]} btnValue="Trending" />
+                        <Link cssClasses={["ddm-item"]} btnValue="Learning Lab" />
+                        <Link cssClasses={["ddm-item"]} btnValue="Open source guides" />
+                        <hr style={{width: "200px", border: "0.5px solid rgba(0, 0, 0, 0.1)"}} />
+                        <Link cssClasses={["ddm-item ddm-item-title-inactive"]} btnValue="Connect with others" />
+                        <Link cssClasses={["ddm-item"]} btnValue="Events" />
+                        <Link cssClasses={["ddm-item"]} btnValue="Community forum" />
+                        <Link cssClasses={["ddm-item"]} btnValue="GitHub Education" />
+                    </div>
                 </Link>
                 
                 <Link btnValue="Marketplace" />
 
-                <Link btnValue="Pricing">
+                <Link toggleDDM={this.toggleDropDownMenu} ddmStateName="ddm3Display" 
+                    btnValue="Pricing" cssClasses={["toggled-link"]}>
                     <FontAwesomeIcon icon={faChevronDown} />
+                    <div className="drop-down-menu" style={this.state.ddm3Display ? {display: "flex", animationName: "ddm-on"} : {display: "none", animationName: ""}}>
+                        <Link cssClasses={["ddm-item ddm-item-title-active"]} btnValue="Plans" />
+                        <Link cssClasses={["ddm-item"]} btnValue="Compare plans" />
+                        <Link cssClasses={["ddm-item"]} btnValue="Contact Sales" />
+                        <hr style={{width: "200px", border: "0.5px solid rgba(0, 0, 0, 0.1)"}} />
+                        <Link cssClasses={["ddm-item ddm-item-title-active"]} btnValue="Nonprofit" />
+                        <Link cssClasses={["ddm-item ddm-item-title-active"]} btnValue="Education" />
+                    </div>
                 </Link>
             </div>
         );

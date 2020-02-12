@@ -9,8 +9,6 @@ body {
 
 nav {
     background-color: #24292e;
-    padding-top: 20px;
-    padding-bottom: 20px;
     padding-left: 4%;
     padding-right: 4%;
     display: flex;
@@ -79,6 +77,7 @@ nav > div:last-child > input:focus {
     display: flex;
     flex-direction: column;
     position: absolute;
+    top: 40px;
     background-color: white;
     border-radius: 3px;
     width: 250px;
@@ -87,6 +86,10 @@ nav > div:last-child > input:focus {
     padding-top: 25px;
     padding-bottom: 20px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    animation-timing-function: linear;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    z-index: 10;
 }
 
 .ddm-item {
@@ -94,6 +97,8 @@ nav > div:last-child > input:focus {
     text-decoration: none;
     margin-left: 25px;
     margin-bottom: 10px;
+    height: 20px;
+    line-height: 20px;
 }
 
 .ddm-item-title-active {
@@ -101,7 +106,30 @@ nav > div:last-child > input:focus {
     font-weight: bold;
 }
 
+.ddm-item-title-inactive {
+    font-family: 'Nanum Gothic Coding', monospace;
+}
+
 .ddm-item:hover {
     color: #1c74df;
 }
-/* font-family: 'Nanum Gothic Coding', monospace; */
+
+.ddm-item-title-inactive:hover {
+    color: #8b8e91;
+    cursor: default;
+}
+
+@keyframes ddm-on {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.toggled-link {
+    height: 70px;
+    line-height: 70px;
+}
