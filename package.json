@@ -4,6 +4,7 @@
   "description": "A clone of my (19XLR95) github profile page (it is a static page)",
   "private": true,
   "scripts": {
+    "dev-build": "webpack --config webpack-dev-config.js",
     "dev-server": "webpack-dev-server --config webpack-dev-config.js --open"
   },
   "keywords": [

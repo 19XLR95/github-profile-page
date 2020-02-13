@@ -10,7 +10,7 @@ export default class Link extends React.Component {
             <a className={this.props.cssClasses && this.props.cssClasses.join(" ")} 
                 onMouseOver={() => this.props.toggleDDM && this.props.toggleDDM(this.props.ddmStateName)}
                 onMouseOut={() => this.props.toggleDDM && this.props.toggleDDM(this.props.ddmStateName)} 
-                href="#">{this.props.btnValue} {this.props.children}</a>
+                href={this.props.hrefVal ? this.props.hrefVal : "#"}>{this.props.btnValue} {this.props.children}</a>
         );
     }
 }

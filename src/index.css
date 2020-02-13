@@ -133,3 +133,113 @@ nav > div:last-child > input:focus {
     height: 70px;
     line-height: 70px;
 }
+
+main {
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    gap: 50px;
+}
+
+main > div > div {
+    margin-bottom: 15px;
+}
+
+main > div > div:last-child {
+    font-size: 14px;
+}
+
+main > div > div:last-child > div {
+    margin-top: 5px;
+}
+
+main > div > div:last-child > div > a {
+    color: #1c74df;
+    text-decoration: none;
+}
+
+main > div > div:last-child > div:last-child > svg {
+    color: rgba(0,0,0,0.5);
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+main > div > div:last-child > div:last-child > span {
+    background-color: #6f42c1;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    padding: 1px 5px 1px 5px;
+}
+
+main > div > div:last-child > div > a:hover {
+    text-decoration: underline;
+}
+
+#profilePic {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+#status {
+    font-size: 12px;
+    border: 1.4px solid rgba(0,0,0,0.1);
+    position: relative;
+    padding: 10px;
+    top: -10px;
+    z-index: -10;
+}
+
+#status > span {
+    font-size: 16px;
+}
+
+h2 {
+    margin: 0;
+}
+
+main > div > div:nth-child(2) > h2:last-child {
+    color: rgba(0,0,0,0.5);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+main > div:last-child > div:first-child {
+    border-bottom: 1.1px solid rgba(0,0,0,0.2);
+    padding-bottom: 22px;
+}
+
+main > div:last-child > div:first-child > a {
+    margin-right: 25px;
+    text-decoration: none;
+    padding-bottom: 20px;
+    padding-right: 5px;
+    color: rgba(0,0,0,0.5);
+}
+
+main > div:last-child > div:first-child > a:hover {
+    border-bottom: 2px solid rgba(0,0,0,0.5);
+    color: rgba(0,0,0,0.8);
+}
+
+main > div:last-child > div:first-child > a > span {
+    background-color: rgba(0,0,0,0.1);
+    color: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.active-tab {
+    border-bottom: 2px solid #e36209;
+    color: black !important;
+    font-weight: bold;
+}
+
+* {
+    box-sizing: border-box;
+}
