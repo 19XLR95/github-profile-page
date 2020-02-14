@@ -207,6 +207,12 @@ main > div > div:nth-child(2) > h2:last-child {
     font-size: 20px;
 }
 
+main > div:last-child {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+}
+
 main > div:last-child > div:first-child {
     border-bottom: 1.1px solid rgba(0,0,0,0.2);
     padding-bottom: 22px;
@@ -228,7 +234,7 @@ main > div:last-child > div:first-child > a:hover {
 main > div:last-child > div:first-child > a > span {
     background-color: rgba(0,0,0,0.1);
     color: rgba(0,0,0,0.6);
-    border-radius: 10px;
+    border-radius: 100%;
     font-size: 12px;
     font-weight: bold;
     padding: 2px;
@@ -238,6 +244,75 @@ main > div:last-child > div:first-child > a > span {
     border-bottom: 2px solid #e36209;
     color: black !important;
     font-weight: bold;
+}
+
+.pinned-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.pinned-project {
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    padding: 20px;
+}
+
+.pinned-project > svg {
+    margin: 0 !important;
+    color: rgba(0,0,0,0.5) !important;
+}
+
+.pinned-project > a {
+    font-weight: bold;
+    color: #1c74df;
+    text-decoration: none;
+}
+
+.pinned-project > a:hover {
+    text-decoration: underline;
+}
+
+.pinned-project > p {
+    color: rgba(0,0,0,0.6);
+    font-size: 12px;
+}
+
+.pinned-project > span {
+    background-color: transparent !important;
+    color: rgba(0,0,0,0.6) !important;
+    font-weight: normal !important;
+    font-size: 12px;
+}
+
+.pinned-project > div {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+.contribution {
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.contribution-grid {
+    display: grid;
+    grid-template-columns: repeat(50, 12px);
+    grid-template-rows: repeat(7, 12px);
+    gap: 3px;
+}
+
+.contribution-grid > div {
+    background-color: rgba(0,0,0,0.1);
+    width: 12px;
+    height: 12px;
 }
 
 * {
