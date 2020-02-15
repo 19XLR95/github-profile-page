@@ -6,6 +6,7 @@ import PinnedProject from "./PinnedProject";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
 import ContributionGrid from "./ContributionGrid";
+import Link from "./Link";
 
 export default class MainGrid extends React.Component {
     render() {
@@ -54,6 +55,29 @@ export default class MainGrid extends React.Component {
 
                     <div className="contribution">
                         <ContributionGrid />
+                    </div>
+
+                    <div className="contribution-activity">
+                        <div>
+                            <p>Contribution activity</p>
+
+                            <span>February 2020</span>
+
+                            <div>
+                                <span><FontAwesomeIcon icon={faBook} /></span>
+                                <Link btnValue="Created 22 commits in 10 repositories" />
+                            </div>
+
+                            <Link btnValue="Show more activity" />
+                        </div>
+
+                        <div>
+                            <div><Link btnValue="2020" /></div>
+                            <div><Link btnValue="2019" /></div>
+                            <div><Link btnValue="2018" /></div>
+                            <div><Link btnValue="2017" /></div>
+                            <div><Link btnValue="2016" /></div>
+                        </div>
                     </div>
                 </MainGridRight>
             </main>
